@@ -77,7 +77,7 @@ function clipEl(el, offset = 0, observe = true) {
 
 // Offsets for each id
 const offsetMap = {
-  "tabbrowser-tabbox": 100,
+  "zen-tabbox-wrapper": 100,
 };
 
 // Render all squircles
@@ -107,7 +107,7 @@ function renderSquircles(observe = true) {
   handleEl(document.querySelector(".urlbar-background"), observe);
 
   // Clip-path cases
-  clipEl(document.querySelector("#tabbrowser-tabbox"), offsetMap["tabbrowser-tabbox"], observe);
+  clipEl(document.querySelector("#zen-tabbox-wrapper"), offsetMap["zen-tabbox-wrapper"], observe);
 }
 
 // Refresh roundness/intensity pref when necessary
