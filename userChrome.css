@@ -1,0 +1,175 @@
+svg.squircle {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+
+    path {
+        fill: none;
+    }
+}
+
+.tabbrowser-tab {
+    .tab-background {
+        background-color: transparent !important;
+        border-radius: 0 !important;
+
+        svg.squircle {
+            height: var(--tab-min-height);
+        }
+
+        &[selected], &[multiselected] {
+            svg.squircle path {
+                fill: var(--tab-selected-bgcolor);
+            }
+        }
+    }
+
+    &:hover {
+        .tab-background:not([selected], [multiselected]) svg.squircle path {
+            fill: var(--tab-hover-background-color);
+        }
+    }
+}
+
+#tabs-newtab-button {
+    background-color: transparent !important;
+    border-radius: 0 !important;
+    position: relative;
+
+    svg.squircle {
+        position: absolute;
+    }
+
+    &:hover {
+        svg.squircle path {
+            fill: var(--toolbarbutton-hover-background);
+        }
+    }
+
+    &[in-urlbar] {
+        svg.squircle path {
+            fill: var(--tab-selected-bgcolor);
+        }
+    }
+}
+
+#urlbar {
+    &:not([breakout-extend]) .urlbar-background {
+        background-color: transparent !important;
+        border-radius: 0 !important;
+
+        svg.squircle path {
+            fill: var(--zen-toolbar-element-bg);
+        }
+    }
+}
+
+.zen-current-workspace-indicator {
+    &::before {
+        background: transparent !important;
+        border-radius: 0 !important;
+    }
+
+    & > svg.squircle {
+        position: absolute;
+        top: 4px;
+        left: calc(var(--zen-toolbox-padding) + 2px);
+        width: calc(100% - var(--zen-toolbox-padding) * 2.5);
+        height: calc(100% - 8px);
+    }
+
+    &:hover {
+        & > svg.squircle path {
+            fill: var(--toolbarbutton-hover-background);
+        }
+    }
+}
+
+#TabsToolbar-customization-target
+.toolbaritem-combined-buttons.unified-extensions-item.chromeclass-toolbar-additional {
+    background-color: transparent !important;
+    border-radius: 0 !important;
+    position: relative;
+
+    svg.squircle {
+        position: absolute;
+
+        path {
+            fill: var(--zen-toolbar-element-bg);
+        }
+    }
+
+    &:hover {
+        svg.squircle path {
+            fill: var(--toolbarbutton-hover-background);
+        }
+    }
+}
+
+zen-folder .tab-group-label-container {
+    &::before {
+        background-color: transparent !important;
+    }
+
+    svg.squircle {
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: calc(100% - 4px);
+        height: calc(100% - 4px);
+    }
+
+    &:hover {
+        svg.squircle path {
+            fill: var(--tab-hover-background-color);
+        }
+    }
+}
+
+tab-group:not([split-view-group]) .tab-group-label-container {
+    /* Necessary to overwrite ATG styles */
+    --tab-hover-background-color: transparent !important;
+    border-radius: 0 !important;
+}
+
+tab-group .tab-group-label-container {
+    background-color: transparent !important;
+    border-radius: 0 !important;
+    position: relative;
+
+    svg.squircle {
+        position: absolute;
+        margin-left: calc(var(--zen-toolbox-padding) * 2);
+        margin-right: 2px;
+    }
+
+    &:hover {
+        svg.squircle path {
+            /* In most cases, this is the same as --tab-hover-background-color */
+            fill: var(--toolbarbutton-hover-background);
+        }
+    }
+}
+
+#zen-sidebar-top-buttons toolbarbutton.toolbarbutton-1:not(.webextension-browser-action),
+#zen-sidebar-foot-buttons > toolbarbutton.toolbarbutton-1 {
+    --toolbarbutton-hover-background: transparent !important;
+    --toolbarbutton-border-radius: 0 !important;
+    position: relative;
+
+    svg.squircle {
+        position: absolute;
+    }
+
+    &:not(#PanelUI-menu-button) svg.squircle {
+        margin: 0 1px;
+        width: 30px;
+        height: 30px;
+    }
+
+    &:hover {
+        svg.squircle path {
+            fill: var(--zen-toolbar-element-bg-hover);
+        }
+    }
+}

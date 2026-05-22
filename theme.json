@@ -1,0 +1,26 @@
+{
+    "id": "squircle",
+    "homepage": "https://github.com/CosmoCreeper/squircle-zen",
+    "author": "CosmoCreeper",
+    "name": "Squircle Zen",
+    "description": "Squircle-ify!",
+    "version": "0.1.0",
+    "ai": "partial",
+    "ai(desc)": "AI wrote the SVG path element calculations",
+    "createdAt": "2026-05-22",
+    "updatedAt": "2026-05-22",
+    "readme": "https://raw.githubusercontent.com/CosmoCreeper/squircle-zen/main/README.md",
+    "style": { "chrome": "userChrome.css" },
+    "scripts": {
+      "squircle.uc.mjs": {
+        "include": ["chrome://browser/content/browser.xhtml"]
+      }
+    },
+    "tags": ["squircles"],
+    "fork": ["zen"],
+    "origin": "store",
+    "preferences": "preferences.json",
+    "supportsUnload": true,
+    "no-updates": true,
+    "enabled": true
+  }

@@ -1,0 +1,8 @@
+[
+    {
+        "type": "string",
+        "defaultValue": "4",
+        "property": "zen.squircles.intensity",
+        "label": "Corner intensity/roundness"
+    }
+]
